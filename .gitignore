@@ -1,0 +1,10 @@
+# 仮想環境
+.venv/
+
+# Jupyter Notebook
+*.ipynb
+.ipynb_checkpoints/
+
+# Python キャッシュ
+__pycache__/
+*.pyc
