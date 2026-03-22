@@ -79,13 +79,15 @@ if __name__ == "__main__":
     x_train = tf.cast(tf.reshape(x_train_full, [-1, 784]), tf.float32) / 255.0
     y_train = tf.one_hot(y_train_full, depth=10)
     
-    batch_size = 100
+    # バッチサイズの設定
+    # バッチサイズを大きくしたときには、Linear Scaling Ruleに従って学習率を調整すると精度を維持できる
+    batch_size = 1000
     train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))
     train_dataset = train_dataset.shuffle(buffer_size=10000).batch(batch_size)
 
     # 2. ディープラーニングモデルのインスタンス化
-    model = MultiLayerPerceptron(hidden_1_units=256, hidden_2_units=128, learning_rate=0.1)
-    training_epochs = 10
+    model = MultiLayerPerceptron(hidden_1_units=256, hidden_2_units=128, learning_rate=0.2)
+    training_epochs = 40
     
     print("隠れ層追加: 第1層=256 Node, 第2層=128 Node")
     print("ディープラーニング・トレーニング開始...")
