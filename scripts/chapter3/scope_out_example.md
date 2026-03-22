@@ -1,8 +1,10 @@
 ## 出力例
 
 ```bash
-% uv run scope1.py 
+% uv run scope.py 
+```
 
+```bash
 利用可能なGPUの数: 1
 2026-03-22 10:47:06.191336: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M5
 2026-03-22 10:47:06.191353: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 32.00 GB
