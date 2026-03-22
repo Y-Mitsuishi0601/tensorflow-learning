@@ -1,7 +1,7 @@
 ## 出力例
 
 ```bash
-% uv run scope.py 
+uv run scope.py 
 ```
 
 ```bash
