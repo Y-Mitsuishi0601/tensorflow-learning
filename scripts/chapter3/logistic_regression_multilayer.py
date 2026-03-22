@@ -8,7 +8,7 @@ class MultiLayerPerceptron(tf.keras.Model):
         super().__init__()
         
         # 【重要】隠れ層を持つ場合、重み(W)はゼロではなく「乱数」で初期化して対称性を壊す
-        # 標準偏差(stddev)を小さくしておくことで学習が安定します
+        # 標準偏差(stddev)を小さくしておくことで学習が安定
         def init_weights(shape, name):
             return tf.Variable(tf.random.normal(shape, stddev=0.1), name=name)
         

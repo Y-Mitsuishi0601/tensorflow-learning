@@ -56,7 +56,7 @@ if __name__ == "__main__":
     x_train = tf.cast(tf.reshape(x_train_full, [-1, 784]), tf.float32) / 255.0
     y_train = tf.one_hot(y_train_full, depth=10)
     
-    batch_size = 100
+    batch_size = 400
     train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))
     train_dataset = train_dataset.shuffle(buffer_size=10000).batch(batch_size)
 
