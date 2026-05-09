@@ -9,6 +9,7 @@ dependencies = [
     "tensorflow-macos==2.15.0",
     "tensorflow-metal==1.1.0",
     "ipykernel",
+    "matplotlib",
     "setuptools<82",
     "tensorboard>=2.15.2",
     "tensorflow>=2.15.0",

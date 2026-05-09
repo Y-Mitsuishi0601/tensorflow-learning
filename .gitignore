@@ -10,4 +10,8 @@ __pycache__/
 *.pyc
 
 # logs
-logs/
+*logs/
+
+# Checkpoints data
+
+frozen_mlp_checkpoint/
